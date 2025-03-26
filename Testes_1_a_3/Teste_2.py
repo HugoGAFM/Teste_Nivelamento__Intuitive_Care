@@ -43,7 +43,7 @@ pdf_file = "downloads/Anexo I.pdf" # Caminho do arquivo PDF
 csv_file = "downloads/Anexo_I.csv" # Caminho do arquivo CSV
 zip_file = "downloads/Teste_HugoGabriel.zip" # Caminho do arquivo ZIP
 
-# Executar a função
+
 transformate(pdf_file, csv_file, zip_file) # Executa a função que foi criada acima. 
 
 print(f"\n !=== Arquivo {csv_file} criado com sucesso! ===!")

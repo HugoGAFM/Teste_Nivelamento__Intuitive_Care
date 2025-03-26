@@ -77,7 +77,7 @@ for nome, link in pdf_links.items(): # 10. Escaneia os Anexos
 
 
 zip_path = "downloads/anexos.zip"  # 12 utiliza a mesma lógica de Escaneamento para compactar os arquivos baixados em um arquivo ZIP.
-with ZipFile(zip_path, "w") as zipf: # 13 Aqui é utilizada a biblioteca zipfile para facilitar o processo.
+with ZipFile(zip_path, "w") as zipf: 
     for arquivo in arquivos_baixados: 
         zipf.write(arquivo, os.path.basename(arquivo))
 print(f"\n !=== Arquivos compactados em {zip_path} ===!")

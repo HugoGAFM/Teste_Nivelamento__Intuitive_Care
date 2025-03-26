@@ -4,7 +4,7 @@
 -- Nesse primeiro script a importação da tabelas do relatório CADOP e as importações de dados 
 -- Nota: ao fazer uma análise mais de perto do CADOP, percebi que alguns valores podem ser null na tabela, eles são: Complemento, DDD, Telefone, Fax, Regiao_de_Comercializacao e Nome_fantasia, por isso não estão marcados como NOT NULL.
 -- Nota 2: também acabei percebendo que na modalidade o valor está errado de varchar no dicionário, o dicionário explicava VARCHAR(2) porém existem muito mais caracteres do que 2, então aumentei para 50.
--- a
+
 CREATE TABLE Operadoras_de_plano_de_saude_com_registro (
     REGISTRO_OPERADORA VARCHAR(6),
     CNPJ VARCHAR(14) NOT NULL,

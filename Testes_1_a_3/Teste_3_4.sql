@@ -1,6 +1,5 @@
 -- Nesse teste foi proposto fazer a migração de dados específicos de operadoras para dentro do banco de dados, depois fazer Queries de busca.
 -- Para esse teste eu utilizei o DBeaver, PostgreSQL, pgAdmin e o psql.
---  a
 
 -- Criação de Banco de Dados --
 
