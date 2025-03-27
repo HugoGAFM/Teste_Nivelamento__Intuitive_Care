@@ -99,11 +99,11 @@ Todos os exercícios rodam localmente e foram devidamente testados e corrigidos 
 
 - Exercício 3_3: Importação dos dados CADOP
   
-![Banco de Dados das Operadoras](images\Banco_de_Dados_Operadora.png)
+![Banco de Dados das Operadoras](images/Banco_de_Dados_Operadora.png)
 
 - Exercício 3_4: Importação dos dados financeiros 
 
-![Dados Financeiros das Operadoras](images\Dados_Financeiros.png)
+![Dados Financeiros das Operadoras](images/Dados_Financeiros.png)
 
 - Exercício 3_5: Selects do Nivelamento
 
