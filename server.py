@@ -8,7 +8,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://relatoriosdocadop-3syqukemm-hugogafms-projects.vercel.app"],
+    allow_origins=["https://relatoriosdocadop-qna0wxw44-hugogafms-projects.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],  # Permitir todos os métodos 
     allow_headers=["*"],  # Permitir todos os cabeçalhos

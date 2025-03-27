@@ -78,7 +78,7 @@ export default {
     const queryString = new URLSearchParams(params).toString();
 
     // Faz a requisição para o backend
-    const response = await axios.get(`http://127.0.0.1:8000/operadoras/busca/?${queryString}`);
+    const response = await axios.get(`https://testenivelamentointuitivecar-production.up.railway.app/operadoras/busca/?${queryString}`);
     this.operadoras = response.data.operadoras;
     console.log("Resposta da API:", response.data);
   } catch (error) {
