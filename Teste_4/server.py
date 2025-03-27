@@ -1,6 +1,8 @@
+import os
 from fastapi import FastAPI, Query
-from fastapi.middleware.cors import CORSMiddleware 
+from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
+from urllib.parse import urlparse
 
 app = FastAPI()
 
@@ -13,14 +15,20 @@ app.add_middleware(
 )
 
 
-def get_connection(): # Função para conectar ao banco de dados
-    return psycopg2.connect(
-        host='localhost',
-        database='teste_nivelamento',
-        user='dev',
-        password='dev',
-    )
+def get_connection():  # Função para conectar ao banco de dados
+    # Pega a URL de conexão do banco de dados do Railway
+    database_url = os.getenv('DATABASE_URL')
 
+    # Usa urllib.parse para fazer o parse da URL de conexão
+    url = urlparse(database_url)
+
+    return psycopg2.connect(
+        host=url.hostname,
+        database=url.path[1:],  # Remove o primeiro '/' da URL
+        user=url.username,
+        password=url.password,
+        port=url.port
+    )
 
 
 @app.get("/operadoras/busca/")
@@ -32,7 +40,6 @@ def buscar_operadoras(
     connection = get_connection()
     cursor = connection.cursor()
 
-    
     query = """
         SELECT REGISTRO_OPERADORA, Nome_Fantasia, Razao_Social, Cidade, UF
         FROM Operadoras_de_plano_de_saude_com_registro
@@ -40,24 +47,20 @@ def buscar_operadoras(
     conditions = []
     params = []
 
-    
-    if termo: # Adiciona condições dinamicamente
+    if termo:  # Adiciona condições dinamicamente
         conditions.append("Nome_Fantasia ILIKE %s")
         params.append(f"%{termo}%")
     if uf:
         conditions.append("UF = %s")
         params.append(uf)
 
-    
-    if conditions: # Adiciona as condições à query, se existirem
+    if conditions:  # Adiciona as condições à query, se existirem
         query += " WHERE " + " AND ".join(conditions)
 
-   
     query += " ORDER BY Nome_Fantasia ASC LIMIT %s"  # Ordena e limita os resultados
     params.append(limit)
 
-    
-    cursor.execute(query, params) # Executa a query
+    cursor.execute(query, params)  # Executa a query
     operadoras = cursor.fetchall()
 
     cursor.close()
@@ -75,7 +78,6 @@ def buscar_operadoras(
             for op in operadoras
         ]
     }
-
 
 
 @app.get("/operadoras/todas/")
