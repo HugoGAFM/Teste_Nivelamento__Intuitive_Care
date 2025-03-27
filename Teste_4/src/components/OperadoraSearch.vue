@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 700px;
+  max-width: 1200px;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -152,7 +152,7 @@ h2 {
 }
 
 button {
-  width: 31rem;
+  width: 32rem;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 20px;
@@ -172,9 +172,9 @@ button {
   padding: 20px;
   box-shadow: 0 2px 4px rgba(35, 77, 212, 0.1);
   text-align: center;
-  flex: 1 1 calc(20% - 15px); 
-  max-width: calc(20% - 15px); 
-  height: 300px; 
+   
+  height: 250px; 
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
