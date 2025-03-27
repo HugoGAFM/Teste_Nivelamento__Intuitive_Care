@@ -5,6 +5,14 @@
  Leia este READ.me para descobrir em detalhes como foram feitos todos os exercícios, bem como todas as extensões e como rodar o projeto localmente.
 
 ---
+### Implementação em Nuvem
+
+Para a criação do Site e da API, foram utilizados o Vercel e o Railway, o Vercel para o front-end da aplicação e o Railway para o back-end e o banco de dados.
+
+ **Acesse o projeto do Teste de nivelamento 4 em:**
+ https://relatoriosdocadop-ccl1hhqem-hugogafms-projects.vercel.app
+
+---
 ### Organização de Pastas
  Todos os testes estão disponíveis em suas Respectivas pastas, cada exercício possui um nome. Sendo eles:
 
@@ -16,7 +24,8 @@
 
 * *Teste_4* <-- Nivelamento 4
   1. *src* <-- Todo o projeto em vue e suas configurações, os arquivos principais de código está no componente ***OperadoraSearch.vue*** para a lógica do front-end do site e a conexão com o banco de dados. 
-  2. *server.py* <-- conexão com o banco de dados localmente.
+   
+ *server.py* <-- conexão com o banco de dados localmente.
 
 Todos os arquivos estão comentados com as respectivas abordagens e ferramentas utilizadas para completar o nivelamento, bem como a lógica utilizada.
 
@@ -34,11 +43,12 @@ Para a conclusão dos testes fornecidos, foram utilizados as seguintes ferrament
 
 
 
+
 ---
 
 ### Configuração de Imports
 
-As atividades 1, 2, e 4, utilizam bibliotecas do python, sem esses imports adequados, o código não vai funcionar. para configurar o projeto, será necessário:
+As atividades 1 e 2 utilizam as bibliotecas do python e a atividade 4 utiliza as bibliotecas não só do python mas também do npm. sem esses imports adequados, o código não vai funcionar. para configurar o projeto, será necessário:
 
 1. Clonar o repositório com ``` git clone https://github.com/HugoGAFM/Teste_Nivelamento__Intuitive_Care.git```
 
@@ -85,12 +95,8 @@ As atividades 1, 2, e 4, utilizam bibliotecas do python, sem esses imports adequ
     pip install uvicorn
    ```
    ```
-    Imports para o Nivelamento 3.
-   ```
-   ```
-    é necessário fazer a instalação do node_modules para o projeto funcionar.
-    
     npm install 
+    npm install axios 
    ```
 
 ---
@@ -98,6 +104,8 @@ As atividades 1, 2, e 4, utilizam bibliotecas do python, sem esses imports adequ
 ### Sobre
 
 Todos os exercícios rodam localmente e foram devidamente testados e corrigidos para erros, só é apenas necessário baixar os Arquivos CSV dos exercícios 3 e importá-los para o banco de dados dentro das tabelas para a conclusão do exercício 4. Fornecerei prints da conexão com banco de dados dando certo e bem como todos os dados importados corretamente. Para a atividade 4, segue um pequeno vídeo meu utilizando a API.
+
+Obs: os arquivos para rodar a aplicação localmente foram mandados no arquivo ZIP no e-mail junto com esse repositório, basta abri-lo e configurar caso queira rodar na maquina local.
 
 - Exercício 3_3: Importação dos dados CADOP
   

@@ -4,14 +4,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div>
-    <!-- A navegação pode ser adicionada aqui -->
+    
     <nav>
       <ul>
         <li><router-link to="/"></router-link></li>
       </ul>
     </nav>
 
-    <!-- Este é o ponto onde o conteúdo das páginas será carregado conforme a rota -->
+    
     <router-view />
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-/* Estilos globais */
+
 h1 {
   text-align: center;
 }
