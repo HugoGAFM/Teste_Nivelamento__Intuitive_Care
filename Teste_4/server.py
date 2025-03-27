@@ -6,14 +6,14 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Permitir apenas o frontend
+    allow_origins=["http://localhost:5173"],
     allow_credentials=True,
-    allow_methods=["*"],  # Permitir todos os métodos (GET, POST, etc.)
+    allow_methods=["*"],  # Permitir todos os métodos 
     allow_headers=["*"],  # Permitir todos os cabeçalhos
 )
 
-# 🔗 Função para conectar ao banco de dados
-def get_connection():
+
+def get_connection(): # Função para conectar ao banco de dados
     return psycopg2.connect(
         host='localhost',
         database='teste_nivelamento',
@@ -32,7 +32,7 @@ def buscar_operadoras(
     connection = get_connection()
     cursor = connection.cursor()
 
-    # Base da query
+    
     query = """
         SELECT REGISTRO_OPERADORA, Nome_Fantasia, Razao_Social, Cidade, UF
         FROM Operadoras_de_plano_de_saude_com_registro
@@ -40,24 +40,24 @@ def buscar_operadoras(
     conditions = []
     params = []
 
-    # Adiciona condições dinamicamente
-    if termo:
+    
+    if termo: # Adiciona condições dinamicamente
         conditions.append("Nome_Fantasia ILIKE %s")
         params.append(f"%{termo}%")
     if uf:
         conditions.append("UF = %s")
         params.append(uf)
 
-    # Adiciona as condições à query, se existirem
-    if conditions:
+    
+    if conditions: # Adiciona as condições à query, se existirem
         query += " WHERE " + " AND ".join(conditions)
 
-    # Ordena e limita os resultados
-    query += " ORDER BY Nome_Fantasia ASC LIMIT %s"
+   
+    query += " ORDER BY Nome_Fantasia ASC LIMIT %s"  # Ordena e limita os resultados
     params.append(limit)
 
-    # Executa a query
-    cursor.execute(query, params)
+    
+    cursor.execute(query, params) # Executa a query
     operadoras = cursor.fetchall()
 
     cursor.close()
@@ -90,6 +90,10 @@ def listar_todas_operadoras():
     connection.close()
 
     return {"operadoras": [
-        {"registro": op[0], "nome_fantasia": op[1], "razao_social": op[2], "cidade": op[3], "uf": op[4]}
+        { "registro": op[0],
+          "nome_fantasia": op[1], 
+          "razao_social": op[2], 
+          "cidade": op[3], 
+          "uf": op[4]}
         for op in operadoras
     ]}

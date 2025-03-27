@@ -2,21 +2,21 @@
   <div class="container">
     <h2>Buscar Operadoras</h2>
 
-    <!-- Campo para Nome Fantasia -->
+    
     <input
       v-model="termo"
-      placeholder="Digite o Nome Fantasia (opcional)"
+      placeholder="Digite o Nome da Empresa"
     />
 
-    <!-- Campo para UF -->
+  
     <select v-model="uf">
-      <option value="">Selecione a UF (opcional)</option>
+      <option value="">Selecione o Estado</option>
       <option v-for="estado in estados" :key="estado" :value="estado">
         {{ estado }}
       </option>
     </select>
 
-    <!-- Campo para Limite -->
+  
     <input
       type="number"
       v-model="limit"
@@ -113,11 +113,11 @@ select {
   font-size: 16px;
   color: #333;
   outline: none;
-  appearance: none; /* Remove o estilo padrão do select */
+  appearance: none;
 }
 
 select {
-  cursor: pointer; /* Mostra o cursor de seleção */
+  cursor: pointer;
 }
 
 .card-list {
@@ -125,9 +125,9 @@ select {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-  justify-content: center; /* Centraliza os cards na linha */
-  gap: 15px; /* Espaçamento entre os cards */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 15px;
 }
 
 h2 {
@@ -142,13 +142,13 @@ h2 {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateX(20px); /* Move os cards para baixo ao aparecer */
+  transform: translateX(20px); 
 }
 
 .fade-leave-from,
 .fade-enter-to {
   opacity: 1;
-  transform: translateX(0); /* Posição final dos cards */
+  transform: translateX(0); 
 }
 
 button {
@@ -172,15 +172,14 @@ button {
   padding: 20px;
   box-shadow: 0 2px 4px rgba(35, 77, 212, 0.1);
   text-align: center;
-  flex: 1 1 calc(20% - 15px); /* Cada card ocupa 20% da largura menos o espaçamento */
-  max-width: calc(20% - 15px); /* Limita a largura máxima de cada card */
-  height: 300px; /* Define uma altura fixa para os cards */
-  width: 1500px;
+  flex: 1 1 calc(20% - 15px); 
+  max-width: calc(20% - 15px); 
+  height: 300px; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribui o conteúdo uniformemente */
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
+  justify-content: space-between; 
+  align-items: center;
+  overflow: hidden; 
 }
 
 .card h3 {
