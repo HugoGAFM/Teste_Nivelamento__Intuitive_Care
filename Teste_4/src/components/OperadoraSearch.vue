@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -122,8 +122,6 @@ select {
 
 .card-list {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap; 
   justify-content: center; 
@@ -131,7 +129,7 @@ select {
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .fade-enter-active,
@@ -173,8 +171,8 @@ button {
   box-shadow: 0 2px 4px rgba(35, 77, 212, 0.1);
   text-align: center;
    
-  height: 250px; 
-  width: 250px;
+  height: 300px; 
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
