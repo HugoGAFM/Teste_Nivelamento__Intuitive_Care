@@ -28,8 +28,8 @@ Para a conclusão dos testes fornecidos, foram utilizados as seguintes ferrament
 
 * Python e SQL
 * PostgreSQL (banco de dados escolhido para a realização dos nivelamentos)
-* DBeaver (para a conexão e criação de tabelas)
-* pgAdmin (importação dos arquivos CSV para o banco de dados.)
+* DBeaver (para a conexão e criação de tabelas localmente)
+* pgAdmin (Criação do banco de dados na nuvem)
 * Vue.js (criação da interface da atividade 4)
 
 
