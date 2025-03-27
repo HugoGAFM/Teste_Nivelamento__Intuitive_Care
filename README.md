@@ -89,6 +89,8 @@ As atividades 1, 2, e 4, utilizam bibliotecas do python, sem esses imports adequ
    ```
    ```
     é necessário fazer a instalação do node_modules para o projeto funcionar.
+    
+    npm install 
    ```
 
 ---
@@ -115,3 +117,18 @@ AVISADOS DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?**
 * **Quais as 10 operadoras com maiores despesas nessa categoria no último ano?**
 
 ![Select 2](images/Maiores_despesas.png)
+
+
+**Teste de Nivelamento 4**
+
+* Clique na imagem abaixo para ir diretamente pro vídeo demonstração da API:
+
+  
+[![Título do Vídeo](images/Demonstração%20API.png)](https://www.youtube.com/watch?v=y7MYzVgpN1s)
+
+* *Notas:*
+  
+  1. foram criados dois caminhos de query do banco de dados, um para o site e o outro para o postman;
+  2. No postman, ele pega todos os dados das tabelas da API, já no site, existe uma query mais filtrada e personalizada.
+
+
